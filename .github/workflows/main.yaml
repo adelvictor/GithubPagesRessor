@@ -19,8 +19,8 @@ jobs:
     - name: Publish .NET Core Project
       run: dotnet publish -c Release -o release --nologo
 
-    - name: Change base-tag in index.html from / to  GITHUBPAGESRESSOR
-      run: sed -i 's/<base href="\/" \/>/<base href="\/GitHubPagesRessor\/" \/>/g' release/wwwroot/index.html
+    - name: Change base-tag in index.html from / to  GithubPagesRessor
+      run: sed -i 's/<base href="\/" \/>/<base href="\/GithubPagesRessor\/" \/>/g' release/wwwroot/index.html
 
     - name: Copy index.html to 404.html
       run: cp release/wwwroot/index.html release/wwwroot/404.html
