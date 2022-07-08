@@ -12,13 +12,58 @@
 </head>
 
 <body>
-    <div id="app">Loading...</div>
 
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
+  <div id="app">
+
+          <div class="container">
+              <div class="ring"></div>
+              <p>Please Wait...</p>
+  
+          </div>
+  </div>
+
+  <div id="blazor-error-ui">
+      An unhandled error has occurred.
+      <a href="" class="reload">Reload</a>
+      <a class="dismiss">🗙</a>
+  </div>
+  <style>
+
+      .ring{
+          border: 5px solid rgb(234, 235, 229);
+          margin-left: 20px;
+          margin-bottom: 10px;
+          border-radius: 50%;
+          border-top: 5px solid black;
+          width: 50px;
+          height: 50px;
+          animation: spin linear 4s;
+      }
+      .container {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          justify-content: center;
+          top: 35vh;
+          left: 35%;
+          max-width: 10rem
+      }
+
+      p {
+          font-size: larger;
+          font-family: Serif;
+      }
+
+      @keyframes spin {
+          0% {
+              transform: rotate(0deg);
+          }
+
+          100% {
+              transform: rotate(360deg);
+          }
+      }
+  </style>
 
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
 
